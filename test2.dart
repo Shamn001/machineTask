@@ -19,18 +19,18 @@ void main(List<String> args) {
     print('');
   }
   print("\n3.\n");
+  int flag=0;
   List<int> newLst=[];
   List<int> b=[1,7,3,5];
   List<int> c=[8,5,4,2];
   for(int i=0;i<b.length;i++){
     for(int j=0;j<c.length;j++){
       if(b[i]==c[j]){
-        continue;
-      }
-      else{
-        newLst.add(c[j]);
+        flag=1;
       }
     }
+    if(flag!=1)
+    newLst.add(b[i]);
   }
   newLst.addAll(c);
   print(newLst);
